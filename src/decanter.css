@@ -1072,11 +1072,7 @@ table tbody th{
   background-color: #B1040E;
   color: #FFFFFF;
   text-align: center;
-  font-family: "Source Sans Pro";
-  font-family: "Helvetica Neue";
-  font-family: Helvetica;
-  font-family: Arial;
-  font-family: sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1;
   -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;

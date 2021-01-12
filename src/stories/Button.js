@@ -5,13 +5,15 @@ import './button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? `su-button` : `su-button--secondary`;
+export const Button = ({ variant, backgroundColor, big, label, ...props }) => {
+  const mode = (variant === "primary") ? "su-button" : `su-button su-button--${variant}`;
+  const buttonSize = big ? "su-button--big" : "";
+  const bgColor = (backgroundColor !== "none" && backgroundColor) ? `su-bg-${backgroundColor}` : "";
   return (
     <button
       type="button"
-      className={[`su-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
+      className={[mode, buttonSize, bgColor].join(' ')}
+      /* style={backgroundColor && { backgroundColor }} */
       {...props}
     >
       {label}
@@ -23,15 +25,15 @@ Button.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
-  primary: PropTypes.bool,
+  big: PropTypes.bool,
   /**
    * What background color to use
    */
-  backgroundColor: PropTypes.string,
+  backgroundColor: PropTypes.oneOf(['none', 'cardinal-red', 'olive', 'palo-alto-dark']),
   /**
    * How large should the button be?
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  variant: PropTypes.oneOf(['primary', 'secondary']),
   /**
    * Button contents
    */
@@ -44,7 +46,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   backgroundColor: null,
-  primary: false,
-  size: 'medium',
+  big: false,
+  variant: 'primary',
   onClick: undefined,
 };
