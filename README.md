@@ -1,3 +1,11 @@
+This is just me trying if I can set up a quick project with the CRA using Decanter 7, while creating a Storybook style guide.
+
+## Quick Setup
+1. Go to project root, npm install
+1. npx -p @storybook/cli sb init
+1. npm run build, npm run start - will bring up the react app site. There should be a Decanter button on the page.
+1. npm run storybook - will bring up a local storybook page (only the "button" component has been modified to use Decanter...but it's not perfect because I just wanted to test first).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
