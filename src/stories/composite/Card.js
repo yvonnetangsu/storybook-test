@@ -4,7 +4,7 @@ import { Button } from "../simple/Button";
 import './card.css';
 
 /**
- * Primary UI component for user interaction
+ * Card component with several fields to ensure flexibility - a media element, headline, super headline, body content, call-to-action (CTA) link and button link. The default .su-card has an image (optional) as its media element. For a better user experience, use either the CTA link or link button but not both together.
  */
 export const Card = ({ variant, link, imageLink, headline, superheadline, body, ...props }) => {
   const mode = variant ? `su-card su-card--${variant}` : `su-card`;
