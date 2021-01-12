@@ -23,19 +23,19 @@ export const Button = ({ variant, backgroundColor, big, label, ...props }) => {
 
 Button.propTypes = {
   /**
-   * Is this the principal call to action on the page?
-   */
-  big: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.oneOf(['none', 'cardinal-red', 'olive', 'palo-alto-dark']),
-  /**
-   * How large should the button be?
+   * Which style of button?
    */
   variant: PropTypes.oneOf(['primary', 'secondary']),
   /**
-   * Button contents
+   * Is the button size big?
+   */
+  big: PropTypes.bool,
+  /**
+   * What background color (from Stanford Identity guide) to use?
+   */
+  backgroundColor: PropTypes.oneOf(['none', 'cardinal-red', 'olive', 'palo-alto-dark']),
+  /**
+   * Button text label
    */
   label: PropTypes.string.isRequired,
   /**
