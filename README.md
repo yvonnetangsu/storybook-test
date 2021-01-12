@@ -3,8 +3,8 @@ This is just me trying if I can set up a quick project with the CRA using Decant
 ## Quick Setup
 1. Go to project root, npm install
 1. npx -p @storybook/cli sb init
-1. npm run build, npm run start - will bring up the react app site. There should be a Decanter button on the page.
-1. npm run storybook - will bring up a local storybook page (only the "button" component has been modified to use Decanter...but it's not perfect because I just wanted to test first).
+1. npm run build, npm run start - this will bring up the react app site. There should be a Decanter button on the page.
+1. npm run storybook - will bring up a local storybook page (only the "button" and "card" component has been modified to use Decanter...they are a bit messy because I just wanted to test quickly first).
 
 # Getting Started with Create React App
 
